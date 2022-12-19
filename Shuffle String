@@ -1,0 +1,28 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//your code here
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      String s=sc.next();
+      int indices[]=new int[n];
+      for(int i=0; i<n; i++)
+        {
+          indices[i]=sc.nextInt();
+        }
+      char ans[]=new char[s.length()];
+      for(int i=0; i<s.length(); i++)
+        {
+          ans[indices[i]] = s.charAt(i);
+        }
+      for(int i=0; i<ans.length; i++)
+        {
+          System.out.print(ans[i]);
+        }
+	}
+}
