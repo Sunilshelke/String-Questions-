@@ -1,0 +1,55 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+ 
+public class Main
+{
+        static char adrian(int idx){
+                idx = idx%3;
+                String sequence = "ABC";
+                return sequence.charAt(idx);
+        }
+ 
+        static char bruno(int idx){
+                idx = idx%4;
+                String sequence = "BABC";
+                return sequence.charAt(idx);
+        }
+        static char goran(int idx){
+                idx = idx%6;
+                String sequence = "CCAABB";
+                return sequence.charAt(idx);
+        }
+ 
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//your code here
+                Scanner sc = new Scanner(System.in);
+                int n = sc.nextInt();
+                String s = sc.next();
+ 
+                int cnt1  = 0, cnt2 = 0, cnt3 = 0;
+                for(int i=0;i<n;i++){
+                        char ch = s.charAt(i);
+                        if(ch==adrian(i))
+                                cnt1++;
+                        if(ch==bruno(i))
+                                cnt2++;
+                        if(ch==goran(i))
+                                cnt3++;
+                }
+ 
+                int maxCurrentAnswers = Math.max(Math.max(cnt1,cnt2),cnt3); 
+                System.out.println(maxCurrentAnswers);
+                if(cnt1==maxCurrentAnswers){
+                        System.out.println("Adrian");
+                }
+                if(cnt2==maxCurrentAnswers){
+                        System.out.println("Bruno");
+                }
+                if(cnt3==maxCurrentAnswers){
+                        System.out.println("Goran");
+                }
+ 
+	}
+}
