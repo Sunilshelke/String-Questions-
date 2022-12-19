@@ -1,0 +1,20 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+                String str=sc.next();
+                int n=str.length();
+                String ans="h";
+                for(int i=0; i<2*(n-2);i++)
+                        {
+                        ans+='e';
+                        }
+                ans+='y';
+                System.out.println(ans);
+        }
+}
